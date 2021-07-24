@@ -21,6 +21,8 @@ const Property = ({
 
     const reviewAmount = reviews.length
 
+    console.log(images)
+
     return (
         <div className="container">
             <h1><b>{title}</b></h1>
@@ -29,7 +31,7 @@ const Property = ({
             <div className="images-section">
                 <Image identifier="main-image" image={mainImage}/>
                 <div className="sub-images-section">
-                    {images.map((_key, image) => <Image identifier="image" image={image} />)}
+                    {images.map(({_key, asset}, image ) => <Image key={_key} identifier="image" image={asset} />)}
                 </div>
             </div>
 

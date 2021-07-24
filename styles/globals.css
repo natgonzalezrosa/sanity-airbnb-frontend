@@ -7,6 +7,20 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.nav {
+  position: sticky;
+  z-index: 100;
+  box-shadow: rgb(0 0 0 / 12%) 0 6px 16px;
+  padding: 30px;
+}
+
+.logo {
+  width: 130px;
+  height: 40px;
+  background-image: url('../images/airbnb-logo.png');
+  background-size: 130px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -67,13 +81,13 @@ body {
   width: 100%;
 }
 
-/* main {
+.main {
   display: flex;
   flex-direction: row;
-} */
+}
 
 .feed-container {
-  width: 100%;
+  width: 50%;
   height: 100vh;
   background-color: #f8f8f8;
   padding: 20px;
@@ -95,4 +109,26 @@ body {
 .card img {
   max-width: 250px;
   border-radius: 20px;
+}
+
+.image {
+  width: 46%;
+  margin: 0 5px 10px 5px;
+}
+
+.image img {
+  width: 100%;
+  max-height: 270px;
+
+}
+
+.sub-images-section {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.line {
+  border: 1px solid grey;
 }
