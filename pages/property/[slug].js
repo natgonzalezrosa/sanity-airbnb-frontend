@@ -22,6 +22,7 @@ const Property = ({
     const reviewAmount = reviews.length
 
     console.log(images)
+    console.log(propertyType)
 
     return (
         <div className="container">
@@ -49,7 +50,7 @@ const Property = ({
                 </div>
                 
                 <div className="price-box">
-                    <h2>£{pricePerNight}</h2>
+                    <h2>${pricePerNight}/per night</h2>
                     <h4>{reviewAmount} review{isMultiple(reviewAmount)}</h4>
                     <Link href="/"><div className="button">Change Dates</div></Link>
                 </div>
@@ -66,7 +67,7 @@ const Property = ({
 
             <hr />
 
-            <h2>Location</h2>
+            <h2>Where you'll be</h2>
             <Map location={location}></Map>
 
         </div>

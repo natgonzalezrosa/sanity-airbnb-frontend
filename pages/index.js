@@ -2,11 +2,15 @@ import { sanityClient, urlFor } from '../sanity'
 import Link from 'next/link'
 import { isMultiple } from "../utils"
 import DashboardMap from '../components/DashboardMap'
+import Head from 'next/head'
 
 const Home = ({ properties }) => {
   console.log(properties)
   return (
     <>
+      <Head>
+        <title>Airbnb</title>
+      </Head>
       {properties && (
         <div className="main">
           <div className="feed-container">
@@ -17,7 +21,7 @@ const Home = ({ properties }) => {
                   <img src={urlFor(property.mainImage)} />
                   <p>{property.reviews.length} review{isMultiple(property.reviews.length)}</p>
                   <h3>{property.title}</h3>
-                  <h3><b>£{property.pricePerNight}/per Night</b></h3>
+                  <h3><b>${property.pricePerNight}/per Night</b></h3>
                 </div></Link>
               ))}
             </div>
